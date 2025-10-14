@@ -56,7 +56,7 @@ To access the Django admin page.
 python manage.py createsuperuser
 ```
 
-## 6. .env File sample 
+### 6. .env File sample 
 ```bash
 DJANGO_SECRET_KEY=your-secret-key-here
 
