@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 LOCAL_APPS = [
     "apps.accounts",
+    "apps.TaskManager",
 ]
 
 THIRD_PARTY_APPS = [
