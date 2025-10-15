@@ -7,9 +7,11 @@ Django==5.2.7
 django-cache-url==3.4.5
 django-environs==0.1.1
 djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
 environs==14.3.0
 marshmallow==4.0.1
 psycopg2-binary==2.9.11
+PyJWT==2.10.1
 python-dotenv==1.1.1
 redbaron==0.9.2
 rply==0.7.8
