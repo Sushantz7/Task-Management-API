@@ -17,7 +17,7 @@ This README shows the basic steps to get the project running locally: install Py
 ### 1. Clone the repo
 ```bash
 https://github.com/Sushantz7/Task-Management-API.git
-cd Task-Management-API.
+cd Task-Management-API
 ```
 
 ### 2. Create and activate Virtual Environment
