@@ -43,9 +43,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
-LOCAL_APPS = ["apps.accounts"]
+LOCAL_APPS = [
+    "apps.accounts",
+]
 
-THIRD_PARTY_APPS = ["rest_framework"]
+THIRD_PARTY_APPS = [
+    "rest_framework",
+    "rest_framework_simplejwt",
+]
 
 INSTALLED_APPS = INSTALLED_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -136,3 +141,16 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+REST_FRAMEWORK = {
+    """
+    Here,
+    If the request has a valid session cookie (e.g., from the Admin login), SessionAuthentication handles it.
+    If it doesn't, DRF moves on to the next class, JWTAuthentication, which will look for a valid JWT token in the Authorization header.
+    """
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
