@@ -8,7 +8,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ["id", "name", "description", "owner", "members"]
+        fields = ["id", "name", "description", "owner", "members", "created_at"]
 
     """
     Why this function?
@@ -27,4 +27,3 @@ class ProjectCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ["name", "description", "owner", "members"]
-
